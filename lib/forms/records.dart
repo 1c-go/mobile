@@ -180,7 +180,7 @@ class RecordScreenState extends State<RecordScreen> {
                   decoration:
                   new BoxDecoration(border: Border.all(color: Colors.black)),
                   child: new ListTile(
-                    enabled: widget.value.status == 'Ожидает оценки',
+                    enabled: widget.value.status == 'Ждет оценку',
                     title: new Text(
                       "Закрыть заявку и оценить прием",
                       textAlign: TextAlign.center,
@@ -326,7 +326,7 @@ class QuestionsScreenState extends State<QuestionsScreen> {
                   decoration:
                   new BoxDecoration(border: Border.all(color: Colors.black)),
                   child: new ListTile(
-                    enabled: questions_data.length == answers_length,
+                    enabled: questions_data != null && questions_data.length == answers_length,
                     title: new Text(
                       "Отправить",
                       textAlign: TextAlign.center,

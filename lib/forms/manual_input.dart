@@ -174,11 +174,7 @@ class _ManualInputPageState extends State<ManualInputPage> {
       );
       if (response.statusCode == 201) {
         LoadingStop(context);
-        CreateshowDialog(context,new Text(
-          "Данные успешно отправлены",
-          style: new TextStyle(fontSize: 16.0),
-        ));
-        print('ok!');
+        Navigator.pop(context);
       } else {
         LoadingStop(context);
         print("Response status: ${response.statusCode}");
