@@ -297,7 +297,7 @@ class _ManualInputPageState extends State<ManualInputPage> {
                 ),
                 new TextFormField(
                   controller: controller_description,
-                  maxLines: 5,
+                  maxLines: null,
                   maxLength: 1000,
                   keyboardType: TextInputType.text,
                   decoration: new InputDecoration(

@@ -14,7 +14,7 @@ class ActivityPage extends StatefulWidget {
 class ActivityPageState extends State<ActivityPage>  with SingleTickerProviderStateMixin {
   //Переменные
   TabController _tabController;
-  String appbar_text = "ЗАЯВКИ";
+  String appbar_text = "ЗАПИСИ";
 
   @override
   void initState() {
@@ -48,13 +48,13 @@ class ActivityPageState extends State<ActivityPage>  with SingleTickerProviderSt
                   new ListTile(
                     selected: _tabController.index == 0,
                     leading: new Icon(Icons.check_box),
-                    title: new Text('ЗАЯВКИ'),
+                    title: new Text('ЗАПИСИ'),
                     onTap: () {
                       if(_tabController.index != 1) {
                         Navigator.of(context).pop();
                         setState(() {
                           _tabController.index = 1;
-                          appbar_text = 'ЗАЯВКИ';
+                          appbar_text = 'ЗАПИСИ';
                         });
                       }
                     },
@@ -67,7 +67,7 @@ class ActivityPageState extends State<ActivityPage>  with SingleTickerProviderSt
                     },
                   ),
                   new ListTile(
-                    leading: new Icon(Icons.info),
+                    leading: new Icon(Icons.help),
                     title: new Text('ПОМОШЬ'),
                     onTap: () {},
                   ),
